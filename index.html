@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню для ресторана</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><i class="fas fa-utensils"></i> кафе.</a>
+        <nav class="navbar">
+            <a class="active" href="#home">Главная</a>
+            <a href="#dishes">Меню</a> 
+            <!-- Ушул жерге dropdown меню кылып койсо да болот. Менюдагы тамактардын туруно карата -->
+            <a href="#about">О нас</a>
+            <a href="#review">Отзывы</a>
+
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <i class="fas fa-shopping-cart" id="cart-icon"></i>
+        </div>
+
+        <!-- Заказдарды корсотуучу аянтча -->
+        <div class="cart">
+            <h2 class="cart-title">Your cart</h2>
+
+            <div class="cart-content">
+                <div class="cart-box">
+                    <img src="images/dish-1.png" alt="" class="cart-img">
+                    <div class="detail-box">
+                        <div class="cart-product-title">Earbuds</div>
+                        <div class="cart-price">$25</div>
+                        <input type="number" name="" id="" value="1" class="cart-quantity">
+                    </div>
+                    <i class="fa-solid fa-trash cart-remove"></i>
+                </div>
+            </div>
+            <div class="total">
+                <total class="total-title">Total</total>
+                <div class="total-price">$0</div>
+            </div>
+            <button type="button" class="btn-buy">Потвердить заказ</button>
+
+            <i class="fa-solid fa-x" id="close-cart"></i>
+        </div>
+
+        
+
+    </header>
+    <form action="" id="search-form">
+        <input type="search" placeholder="Искать что-нибудь..." name="" id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close"></i>
+    </form>
+
+    <section class="home" id="home">
+        <div class="swiper home-slider">
+            <div class="swiper-wrapper wrapper">
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>Наше специальное блюдо</span>
+                        <h3>Спагетти</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, 
+                            adipisicing elit. Fugiat totam reprehenderit a?</p>
+                        <a href="http://" class="btn">Заказать сейчас</a>
+                    </div>
+                    <div class="image">
+                        <img src="images/home-img-1.png" alt="">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>Наше специальное блюдо</span>
+                        <h3>Гриль</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, 
+                            adipisicing elit. Fugiat totam reprehenderit a?</p>
+                        <a href="http://" class="btn">Заказать сейчас</a>
+                    </div>
+                    <div class="image">
+                        <img src="images/home-img-2.png" alt="">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>Наше специальное блюдо</span>
+                        <h3>Пицца</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, 
+                            adipisicing elit. Fugiat totam reprehenderit a?</p>
+                        <a href="http://" class="btn">Заказать сейчас</a>
+                    </div>
+                    <div class="image">
+                        <img src="images/home-img-3.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+     <!-- <section class="menu" id="menu">
+
+        <h3 class="sub-heading"> наше меню </h3>
+        <h1 class="heading"> сегодняшнее меню </h1>
+    
+        <div class="box-container">
+    
+            <div class="box">
+                <div class="image">
+                    <img src="images/menu-1.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Вкусная еда</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+                    <a href="#" class="btn">Заказать</a>
+                    <span class="price">250 сом</span>
+                </div>
+            </div>
+    
+            <div class="box">
+                <div class="image">
+                    <img src="images/menu-2.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Вкусная еда</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+                    <a href="#" class="btn">Заказать</a>
+                    <span class="price">250 сом</span>
+                </div>
+            </div>
+    
+            <div class="box">
+                <div class="image">
+                    <img src="images/menu-3.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Вкусная еда</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+                    <a href="#" class="btn">Заказать</a>
+                    <span class="price">250 сом</span>
+                </div>
+            </div>
+    
+            <div class="box">
+                <div class="image">
+                    <img src="images/menu-4.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Вкусная еда</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+                    <a href="#" class="btn">Заказать</a>
+                    <span class="price">250 сом</span>
+                </div>
+            </div>
+    
+            <div class="box">
+                <div class="image">
+                    <img src="images/menu-5.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Вкусная еда</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+                    <a href="#" class="btn">Заказать</a>
+                    <span class="price">250 сом</span>
+                </div>
+            </div>
+    
+            <div class="box">
+                <div class="image">
+                    <img src="images/menu-6.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Вкусная еда</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+                    <a href="#" class="btn">Заказать</a>
+                    <span class="price">250 сом</span>
+                </div>
+            </div>
+    
+            <div class="box">
+                <div class="image">
+                    <img src="images/menu-7.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Вкусная еда</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+                    <a href="#" class="btn">Заказать</a>
+                    <span class="price">250 сом</span>
+                </div>
+            </div>
+    
+            <div class="box">
+                <div class="image">
+                    <img src="images/menu-8.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Вкусная еда</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+                    <a href="#" class="btn">Заказать</a>
+                    <span class="price">250 сом</span>
+                </div>
+            </div>
+    
+        </div>
+    
+    </section> -->
+
+    <section class="dishes" id="dishes">
+
+        <h3 class="sub-heading"> Наши блюда </h3>
+        <h1 class="heading">Популярные блюда</h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="images/dish-1.png" alt="" class="dishsimg">
+                <h3>вкусная еда</h3>
+                <span>200 сом</span>
+                <a href="" class="btn">заказать</a>
+            </div>
+
+            <div class="box">
+                <img src="images/dish-2.png" alt="" class="dishsimg">
+                <h3>вкусная еда</h3>
+                <span>200 сом</span>
+                <a href="" class="btn">заказать</a>
+            </div>
+
+            <div class="box">
+                <img src="images/dish-3.png" alt="" class="dishsimg">
+                <h3>вкусная еда</h3>
+                <span>200 сом</span>
+                <a href="" class="btn">заказать</a>
+            </div>
+
+            <div class="box">
+                <img src="images/dish-4.png" alt="" class="dishsimg">
+                <h3>вкусная еда</h3>
+                <span>200 сом</span>
+                <a href="" class="btn">заказать</a>
+            </div>
+
+            <div class="box">
+                <img src="images/dish-5.png" alt="" class="dishsimg">
+                <h3>вкусная еда</h3>
+                <span>200 сом</span>
+                <a href="" class="btn">заказать</a>
+            </div>
+
+            <div class="box">
+                <img src="images/dish-6.png" alt="" class="dishsimg">
+                <h3>вкусная еда</h3>
+                <span>200 сом</span>
+                <a href="" class="btn">заказать</a>
+            </div>
+
+            <div class="box">
+                <img src="images/dish-1.png" alt="" class="dishsimg">
+                <h3>вкусная еда</h3>
+                <span>200 сом</span>
+                <a href="" class="btn">заказать</a>
+            </div>
+
+            <div class="box">
+                <img src="images/dish-2.png" alt="" class="dishsimg">
+                <h3>вкусная еда</h3>
+                <span>200 сом</span>
+                <a href="" class="btn">заказать</a>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="about" id="about">
+
+        <h3 class="sub-heading"> о заведение </h3>
+        <h1 class="heading"> почему мы? </h1>
+    
+        <div class="row">
+    
+            <div class="image">
+                <img src="images/about-img.png" alt="">
+            </div>
+    
+            <div class="content">
+                <h3>Самая вкусная еда</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, sequi corrupti corporis 
+                    quaerat voluptatem ipsam neque labore modi autem, saepe numquam quod reprehenderit rem? 
+                    Tempora aut soluta odio corporis nihil!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, nemo. Sit porro illo 
+                    eos cumque deleniti iste alias, eum natus.</p>
+                <div class="icons-container">
+                    <div class="icons">
+                        <i class="fas fa-shipping-fast"></i>
+                        <span>бесплатная доставка</span>
+                    </div>
+                    <div class="icons">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span>быстрый платеж</span>
+                    </div>
+                    <div class="icons">
+                        <i class="fas fa-headset"></i>
+                        <span>24/7 на связи</span>
+                    </div>
+                </div>
+                <a href="#" class="btn">Подробнее(вотс ссылка)</a>
+            </div>
+    
+        </div>
+    
+    </section>
+
+    <section class="review" id="review">
+
+        <h3 class="sub-heading"> клиенты о нас </h3>
+        <h1 class="heading"> Отзывы </h1>
+    
+        <div class="swiper review-slider">
+    
+            <div class="swiper-wrapper wrapper">
+    
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="images/pic-1.png" alt="">
+                        <div class="user-info">
+                            <h3>john deo</h3>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat consequuntur repellendus aperiam deserunt nihil, corporis fugit voluptatibus voluptate totam neque illo placeat eius quis laborum aspernatur quibusdam. Ipsum, magni.</p>
+                </div>
+    
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="images/pic-1.png" alt="">
+                        <div class="user-info">
+                            <h3>john deo</h3>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat consequuntur repellendus aperiam deserunt nihil, corporis fugit voluptatibus voluptate totam neque illo placeat eius quis laborum aspernatur quibusdam. Ipsum, magni.</p>
+                </div>
+    
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="images/pic-1.png" alt="">
+                        <div class="user-info">
+                            <h3>john deo</h3>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat consequuntur repellendus aperiam deserunt nihil, corporis fugit voluptatibus voluptate totam neque illo placeat eius quis laborum aspernatur quibusdam. Ipsum, magni.</p>
+                </div>
+    
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="images/pic-1.png" alt="">
+                        <div class="user-info">
+                            <h3>john deo</h3>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat consequuntur repellendus aperiam deserunt nihil, corporis fugit voluptatibus voluptate totam neque illo placeat eius quis laborum aspernatur quibusdam. Ipsum, magni.</p>
+                </div>
+    
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>contact info</h3>
+                <p>+996 (702) 440-912</p>
+                <p>Adress, Osh, Kyrgyzstan</p>
+            </div>
+        </div>
+        <div class="credit"> copyright @ 2022 by <span>Nurkyz Oskonbai</span> </div>
+    
+    </section>
+<!-- Баштагында загрузка болуп жаткандагы гиф -->
+    <div class="loader-container">
+        <img src="images/loader.gif" alt="">
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
